@@ -17,3 +17,7 @@ Heres a short list of the positives it has:
 
 ## Used libraries
  - Browsers WebGL implementation
+
+## Status
+Early development!
+There is no actual tracing done yet, I am still developing the backend parts to make sure the shaders get the info they need later on when actual tracing is being done
