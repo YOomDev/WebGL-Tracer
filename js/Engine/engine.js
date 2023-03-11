@@ -95,19 +95,21 @@ function engineLoop() {
     const uvLoc = gl.getUniformLocation(s, "uv");
     const sizeLoc = gl.getUniformLocation(s, "count");
 
-    let c = 0;
 
     // Set up final arrays
     const uvArray = [];
     const vertsArray = [];
     for (let i = vertsArray.length; i < count * 3; i++) { vertsArray.push(0.0); }
+    for (let i =    uvArray.length; i < count * 2; i++) {    uvArray.push(0.0); }
+
+    let index = 0;
 
     // Fill arrays with actual data as long as there is place for vertices
     // TODO: load vertices from scene
 
     // Fill GPU uniform data for the frame
-    gl.uniform1f(sizeLoc, parseFloat("" + c));
-    gl.uniform2fv(uvLoc, uvArray);
+    gl.uniform1f(sizeLoc  , parseFloat("" + (index - 1)));
+    gl.uniform2fv(uvLoc   , uvArray   );
     gl.uniform3fv(vertsLoc, vertsArray);
 
     // Draw the frame using the shader in use
