@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>GLTest - Deferred tracing renderer</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="view">
+                <canvas width="1920" height="1080" id="Display" class="screen"></canvas>
+
+                <div class="text">
+                    <h1>GLTest</h1>
+                    <p>If test succeeds it should be drawing a red triangle, otherwise it didn't work!</p>
+                    <p id="Error"></p>
+                </div>
+            </div>
+        </div>
+
+        <script async src="../Renderer/renderer.js"></script>
+        <script async src="GLTest.js"></script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "deferred-tracer",
+  "version": "1.0.0",
+  "description": "A hybrid Tracer based on the deferred rendering principle",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Ype Oomes",
+  "license": "ISC"
+}

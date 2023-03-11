@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dev test - Deferred tracing renderer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="view">
+                <canvas onmousemove="updateMouseLocation(event)" width="1920" height="1080" id="Display" class="screen"></canvas>
+
+                <div class="text">
+                    <h1>Idea</h1>
+                    <p>Sort of deferred renderer.
+                        Renders most of the normal image through standard rendering, then does a render pass over parts of the image that want to use reflection/refraction,
+                        can be saved in image alpha channel (refraction < 128, 128 = nothing, reflection > 128) for the tracing pass to know what to do</p>
+
+                    <p id="Error"></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/Renderer/renderer.js"></script>
+        <script src="js/Engine/engine.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
